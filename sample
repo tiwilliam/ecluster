@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from ecluster import Cluster, Type
 
 # Type properties: nodes, image, type, keypair, groups, user
