@@ -1,7 +1,4 @@
-# ecluster - declarative cloud infrastructure management tool
-## by William Tisäter
-
-Available for use under the [MIT License](http://en.wikipedia.org/wiki/MIT_License)
+### Available for use under the [MIT License](http://en.wikipedia.org/wiki/MIT_License)
 
 Copyright (c) 2011 by William Tisäter
 
