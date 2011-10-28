@@ -1,0 +1,22 @@
+from ecluster import Cluster, Type
+
+# Type properties: nodes, image, type, keypair, groups, user
+
+db = Type('db')
+db.nodes = 1
+db.groups = ['ssh']
+
+web = Type('web')
+web.nodes = 1
+web.groups = ['ssh']
+
+production = Cluster('ec2', 'production', key='<your-aws-key>', secret='<your-aws-secret>')
+
+# Global values applied if empty
+production.type.image = 'ami-8e1fece7'
+production.type.keypair = 'foopair'
+production.type.type = 't1.micro'
+production.type.user = 'ec2-user'
+production.type.bootstrap = 'puppet.sh'
+
+production.run([db, web])
